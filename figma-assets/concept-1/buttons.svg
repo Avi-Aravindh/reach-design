@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <title>Crystalline Flow - Button Components</title>
+
+  <defs>
+    <filter id="buttonShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-opacity="0.1"/>
+    </filter>
+    <filter id="buttonHoverShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="600" fill="#FAFAFA"/>
+
+  <!-- Title -->
+  <text x="40" y="40" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="600" fill="#0A0A0A">Button Components</text>
+  <text x="40" y="65" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#737373">Crystalline Flow Design System</text>
+
+  <!-- Primary Buttons -->
+  <text x="40" y="110" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="500" fill="#525252">PRIMARY BUTTONS</text>
+
+  <!-- Large Primary -->
+  <rect x="40" y="130" width="180" height="56" rx="8" fill="#6366F1" filter="url(#buttonShadow)"/>
+  <text x="130" y="164" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" text-anchor="middle" fill="#FFFFFF">Get Started Free</text>
+  <text x="40" y="208" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#737373">Large (56px)</text>
+
+  <!-- Default Primary -->
+  <rect x="240" y="138" width="160" height="40" rx="6" fill="#6366F1" filter="url(#buttonShadow)"/>
+  <text x="320" y="164" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#FFFFFF">Get Started</text>
+  <text x="240" y="208" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#737373">Default (40px)</text>
+
+  <!-- Small Primary -->
+  <rect x="420" y="142" width="120" height="32" rx="6" fill="#6366F1" filter="url(#buttonShadow)"/>
+  <text x="480" y="164" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="500" text-anchor="middle" fill="#FFFFFF">Sign Up</text>
+  <text x="420" y="208" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#737373">Small (32px)</text>
+
+  <!-- Hover State -->
+  <rect x="560" y="138" width="160" height="40" rx="6" fill="#4F46E5" filter="url(#buttonHoverShadow)"/>
+  <text x="640" y="164" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#FFFFFF">Get Started</text>
+  <text x="560" y="208" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#737373">Hover State</text>
+
+  <!-- Secondary Buttons -->
+  <text x="40" y="260" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="500" fill="#525252">SECONDARY BUTTONS</text>
+
+  <!-- Ghost/Outline -->
+  <rect x="40" y="278" width="160" height="40" rx="6" fill="transparent" stroke="#E5E5E5" stroke-width="1"/>
+  <text x="120" y="304" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#0A0A0A">Watch Demo</text>
+  <text x="40" y="340" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#737373">Ghost/Outline</text>
+
+  <!-- Ghost Hover -->
+  <rect x="220" y="278" width="160" height="40" rx="6" fill="transparent" stroke="#0A0A0A" stroke-width="1"/>
+  <text x="300" y="304" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#0A0A0A">Watch Demo</text>
+  <text x="220" y="340" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#737373">Ghost Hover</text>
+
+  <!-- Text Button -->
+  <text x="440" y="304" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#6366F1">Learn more →</text>
+  <text x="400" y="340" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#737373">Text/Link</text>
+
+  <!-- With Icon -->
+  <rect x="560" y="278" width="160" height="40" rx="6" fill="transparent" stroke="#E5E5E5" stroke-width="1"/>
+  <text x="640" y="304" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#0A0A0A">▶  Watch Demo</text>
+  <text x="560" y="340" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#737373">With Icon</text>
+
+  <!-- CTA Section -->
+  <text x="40" y="400" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="500" fill="#525252">CTA BUTTONS</text>
+
+  <!-- Large CTA -->
+  <rect x="40" y="420" width="220" height="56" rx="8" fill="#6366F1" filter="url(#buttonShadow)"/>
+  <text x="150" y="454" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" text-anchor="middle" fill="#FFFFFF">Start Your Free Trial →</text>
+  <text x="40" y="498" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#737373">Large CTA (56px)</text>
+
+  <!-- Inverted CTA (for colored backgrounds) -->
+  <rect x="280" y="420" width="200" height="56" rx="8" fill="#FFFFFF" filter="url(#buttonShadow)"/>
+  <text x="380" y="454" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" text-anchor="middle" fill="#6366F1">Start Free Trial</text>
+  <text x="280" y="498" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#737373">Inverted (for dark bg)</text>
+
+  <!-- Disabled -->
+  <rect x="500" y="428" width="160" height="40" rx="6" fill="#E5E5E5"/>
+  <text x="580" y="454" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#A3A3A3">Disabled</text>
+  <text x="500" y="498" font-family="Inter, system-ui, sans-serif" font-size="10" fill="#737373">Disabled State</text>
+
+  <!-- Specifications -->
+  <text x="40" y="550" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#737373">Specs: Font-weight 500 | Border-radius 6-8px | Padding 12-24px horizontal</text>
+  <text x="40" y="570" font-family="Inter, system-ui, sans-serif" font-size="11" fill="#737373">Hover: scale(1.02) + increased shadow | Transition: 200ms ease</text>
+</svg>

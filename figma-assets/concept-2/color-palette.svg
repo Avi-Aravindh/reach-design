@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="400" viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <title>Vibrant Momentum - Color Palette</title>
+
+  <!-- Background -->
+  <rect width="800" height="400" fill="#0F0F0F"/>
+
+  <!-- Title -->
+  <text x="40" y="40" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="600" fill="#FFFFFF">Vibrant Momentum</text>
+  <text x="40" y="65" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#71717A">Color System</text>
+
+  <!-- Primary Colors -->
+  <text x="40" y="110" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="500" fill="#A1A1AA">PRIMARY PALETTE</text>
+
+  <!-- Base Colors Row -->
+  <rect x="40" y="125" width="80" height="80" rx="8" fill="#0F0F0F" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="80" y="225" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#71717A">bg-base</text>
+  <text x="80" y="238" font-family="monospace" font-size="9" text-anchor="middle" fill="#71717A">#0F0F0F</text>
+
+  <rect x="135" y="125" width="80" height="80" rx="8" fill="#1A1A1A" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+  <text x="175" y="225" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#71717A">bg-elevated</text>
+  <text x="175" y="238" font-family="monospace" font-size="9" text-anchor="middle" fill="#71717A">#1A1A1A</text>
+
+  <!-- Text Colors -->
+  <rect x="240" y="125" width="80" height="80" rx="8" fill="#FFFFFF"/>
+  <text x="280" y="225" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#71717A">text-primary</text>
+  <text x="280" y="238" font-family="monospace" font-size="9" text-anchor="middle" fill="#71717A">#FFFFFF</text>
+
+  <rect x="335" y="125" width="80" height="80" rx="8" fill="#A1A1AA"/>
+  <text x="375" y="225" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#71717A">text-secondary</text>
+  <text x="375" y="238" font-family="monospace" font-size="9" text-anchor="middle" fill="#71717A">#A1A1AA</text>
+
+  <rect x="430" y="125" width="80" height="80" rx="8" fill="#71717A"/>
+  <text x="470" y="225" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#71717A">text-tertiary</text>
+  <text x="470" y="238" font-family="monospace" font-size="9" text-anchor="middle" fill="#71717A">#71717A</text>
+
+  <!-- Accent Colors -->
+  <text x="40" y="280" font-family="Inter, system-ui, sans-serif" font-size="12" font-weight="500" fill="#A1A1AA">ACCENT COLORS</text>
+
+  <rect x="40" y="295" width="80" height="80" rx="8" fill="#7C3AED"/>
+  <text x="80" y="390" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#71717A">accent-purple</text>
+
+  <rect x="135" y="295" width="80" height="80" rx="8" fill="#EC4899"/>
+  <text x="175" y="390" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#71717A">accent-pink</text>
+
+  <rect x="230" y="295" width="80" height="80" rx="8" fill="#3B82F6"/>
+  <text x="270" y="390" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#71717A">accent-blue</text>
+
+  <!-- Gradient -->
+  <defs>
+    <linearGradient id="heroGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED"/>
+      <stop offset="50%" style="stop-color:#EC4899"/>
+      <stop offset="100%" style="stop-color:#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED"/>
+      <stop offset="100%" style="stop-color:#EC4899"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="340" y="295" width="170" height="80" rx="8" fill="url(#heroGradient)"/>
+  <text x="425" y="390" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#71717A">gradient-hero</text>
+
+  <rect x="525" y="295" width="120" height="80" rx="8" fill="url(#accentGradient)"/>
+  <text x="585" y="390" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#71717A">bg-accent</text>
+
+  <!-- Border glow example -->
+  <rect x="660" y="295" width="80" height="80" rx="8" fill="#1A1A1A" stroke="rgba(124,58,237,0.5)" stroke-width="2"/>
+  <text x="700" y="390" font-family="Inter, system-ui, sans-serif" font-size="10" text-anchor="middle" fill="#71717A">border-glow</text>
+</svg>

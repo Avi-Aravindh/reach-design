@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440" height="900" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg">
+  <title>Crystalline Flow - Hero Section (Desktop 1440px)</title>
+
+  <defs>
+    <filter id="heroShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="25" stdDeviation="50" flood-color="#000000" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1440" height="900" fill="#FAFAFA"/>
+
+  <!-- Navigation -->
+  <rect x="0" y="0" width="1440" height="64" fill="#FFFFFF" fill-opacity="0.9"/>
+
+  <!-- Logo -->
+  <text x="80" y="40" font-family="Geist, Inter, system-ui, sans-serif" font-size="20" font-weight="500" fill="#0A0A0A">Reach</text>
+
+  <!-- Nav Links -->
+  <text x="520" y="40" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#525252">Features</text>
+  <text x="620" y="40" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#525252">Pricing</text>
+  <text x="720" y="40" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#525252">Resources</text>
+  <text x="830" y="40" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#525252">Blog</text>
+
+  <!-- Nav CTA -->
+  <text x="1200" y="40" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#525252">Sign in</text>
+  <rect x="1280" y="16" width="120" height="40" rx="6" fill="#6366F1"/>
+  <text x="1340" y="42" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" text-anchor="middle" fill="#FFFFFF">Get Started →</text>
+
+  <!-- Floating Platform Icons (subtle) -->
+  <circle cx="200" cy="180" r="20" fill="#F5F5F5" stroke="#E5E5E5" stroke-width="1"/>
+  <text x="200" y="186" font-size="14" text-anchor="middle">𝕏</text>
+
+  <circle cx="1240" cy="200" r="20" fill="#F5F5F5" stroke="#E5E5E5" stroke-width="1"/>
+  <text x="1240" y="206" font-size="14" text-anchor="middle">📷</text>
+
+  <circle cx="180" cy="380" r="16" fill="#F5F5F5" stroke="#E5E5E5" stroke-width="1"/>
+  <text x="180" y="385" font-size="12" text-anchor="middle">in</text>
+
+  <circle cx="1260" cy="360" r="18" fill="#F5F5F5" stroke="#E5E5E5" stroke-width="1"/>
+  <text x="1260" y="366" font-size="12" text-anchor="middle">♪</text>
+
+  <!-- Hero Content -->
+  <text x="720" y="260" font-family="Geist, Inter, system-ui, sans-serif" font-size="72" font-weight="600" text-anchor="middle" fill="#0A0A0A" letter-spacing="-0.02em">Social media management</text>
+  <text x="720" y="340" font-family="Geist, Inter, system-ui, sans-serif" font-size="72" font-weight="600" text-anchor="middle" fill="#0A0A0A" letter-spacing="-0.02em">for modern teams</text>
+
+  <!-- Subheadline -->
+  <text x="720" y="420" font-family="Inter, system-ui, sans-serif" font-size="20" text-anchor="middle" fill="#525252">Schedule, analyze, and grow your social presence from a single</text>
+  <text x="720" y="450" font-family="Inter, system-ui, sans-serif" font-size="20" text-anchor="middle" fill="#525252">dashboard. Join 10,000+ teams reaching their audience.</text>
+
+  <!-- CTA Buttons -->
+  <rect x="540" y="490" width="180" height="48" rx="8" fill="#6366F1"/>
+  <text x="630" y="522" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" text-anchor="middle" fill="#FFFFFF">Get Started Free</text>
+
+  <rect x="740" y="490" width="160" height="48" rx="8" fill="transparent" stroke="#E5E5E5" stroke-width="1"/>
+  <text x="820" y="522" font-family="Inter, system-ui, sans-serif" font-size="16" font-weight="500" text-anchor="middle" fill="#0A0A0A">▶  Watch Demo</text>
+
+  <!-- Trust text -->
+  <text x="720" y="570" font-family="Inter, system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#737373">No credit card required</text>
+
+  <!-- Product Preview (Browser Window) -->
+  <rect x="220" y="620" width="1000" height="560" rx="16" fill="#FFFFFF" filter="url(#heroShadow)"/>
+
+  <!-- Browser Chrome -->
+  <rect x="220" y="620" width="1000" height="40" rx="16" fill="#F5F5F5"/>
+  <circle cx="248" cy="640" r="6" fill="#FF5F57"/>
+  <circle cx="268" cy="640" r="6" fill="#FEBC2E"/>
+  <circle cx="288" cy="640" r="6" fill="#28C840"/>
+  <text x="720" y="646" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#737373">Reach Dashboard</text>
+
+  <!-- Dashboard Content Placeholder -->
+  <rect x="240" y="680" width="200" height="100" rx="8" fill="#F5F5F5"/>
+  <text x="340" y="720" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#737373">Scheduled</text>
+  <text x="340" y="745" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="600" text-anchor="middle" fill="#0A0A0A">24</text>
+
+  <rect x="460" y="680" width="200" height="100" rx="8" fill="#F5F5F5"/>
+  <text x="560" y="720" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#737373">Drafts</text>
+  <text x="560" y="745" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="600" text-anchor="middle" fill="#0A0A0A">12</text>
+
+  <rect x="680" y="680" width="200" height="100" rx="8" fill="#F5F5F5"/>
+  <text x="780" y="720" font-family="Inter, system-ui, sans-serif" font-size="12" text-anchor="middle" fill="#737373">Analytics</text>
+  <text x="780" y="745" font-family="Inter, system-ui, sans-serif" font-size="24" font-weight="600" text-anchor="middle" fill="#2DD4BF">↑ 34%</text>
+
+  <!-- Post Composer -->
+  <rect x="240" y="800" width="760" height="180" rx="12" fill="#FFFFFF" stroke="#E5E5E5" stroke-width="1"/>
+  <text x="260" y="830" font-family="Inter, system-ui, sans-serif" font-size="14" font-weight="500" fill="#0A0A0A">Post Composer</text>
+  <rect x="260" y="850" width="720" height="80" rx="8" fill="#F5F5F5"/>
+  <text x="280" y="890" font-family="Inter, system-ui, sans-serif" font-size="14" fill="#A3A3A3">What's on your mind? Share something amazing...</text>
+
+  <!-- Composer Toolbar -->
+  <rect x="260" y="940" width="32" height="32" rx="6" fill="#F5F5F5"/>
+  <text x="276" y="962" font-size="14" text-anchor="middle">📷</text>
+  <rect x="300" y="940" width="32" height="32" rx="6" fill="#F5F5F5"/>
+  <text x="316" y="962" font-size="14" text-anchor="middle">📹</text>
+  <rect x="340" y="940" width="32" height="32" rx="6" fill="#F5F5F5"/>
+  <text x="356" y="962" font-size="14" text-anchor="middle">📊</text>
+
+  <rect x="860" y="940" width="100" height="32" rx="6" fill="#6366F1"/>
+  <text x="910" y="962" font-family="Inter, system-ui, sans-serif" font-size="13" font-weight="500" text-anchor="middle" fill="#FFFFFF">Publish</text>
+</svg>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440" height="900" viewBox="0 0 1440 900" xmlns="http://www.w3.org/2000/svg">
+  <title>Vibrant Momentum - Hero Section (Desktop 1440px)</title>
+
+  <defs>
+    <linearGradient id="heroGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED"/>
+      <stop offset="50%" style="stop-color:#EC4899"/>
+      <stop offset="100%" style="stop-color:#3B82F6"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7C3AED"/>
+      <stop offset="100%" style="stop-color:#EC4899"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C3AED"/>
+      <stop offset="100%" style="stop-color:#EC4899"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40" result="blur"/>
+      <feFlood flood-color="#7C3AED" flood-opacity="0.3"/>
+      <feComposite in2="blur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1440" height="900" fill="#0F0F0F"/>
+
+  <!-- Mesh gradient blobs (simplified as circles) -->
+  <ellipse cx="300" cy="300" rx="400" ry="300" fill="#7C3AED" fill-opacity="0.15" filter="url(#glow)"/>
+  <ellipse cx="1100" cy="400" rx="350" ry="250" fill="#EC4899" fill-opacity="0.12" filter="url(#glow)"/>
+  <ellipse cx="700" cy="600" rx="300" ry="200" fill="#3B82F6" fill-opacity="0.1" filter="url(#glow)"/>
+
+  <!-- Floating Navigation (Pill) -->
+  <rect x="320" y="20" width="800" height="56" rx="9999" fill="rgba(26,26,26,0.8)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+
+  <!-- Logo in nav -->
+  <text x="370" y="56" font-family="Geist, Inter, system-ui, sans-serif" font-size="18" font-weight="600" fill="#FFFFFF">Reach</text>
+
+  <!-- Nav Links -->
+  <text x="520" y="54" font-family="Geist, Inter, system-ui, sans-serif" font-size="14" fill="#A1A1AA">Features</text>
+  <text x="620" y="54" font-family="Geist, Inter, system-ui, sans-serif" font-size="14" fill="#A1A1AA">Pricing</text>
+  <text x="710" y="54" font-family="Geist, Inter, system-ui, sans-serif" font-size="14" fill="#A1A1AA">Blog</text>
+
+  <!-- Nav CTA -->
+  <text x="900" y="54" font-family="Geist, Inter, system-ui, sans-serif" font-size="14" fill="#A1A1AA">Sign in</text>
+  <rect x="980" y="30" width="100" height="36" rx="9999" fill="url(#btnGrad)"/>
+  <text x="1030" y="54" font-family="Geist, Inter, system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle" fill="#FFFFFF">Try Free</text>
+
+  <!-- Hero Content -->
+  <text x="720" y="280" font-family="Cal Sans, Geist, system-ui, sans-serif" font-size="80" font-weight="800" text-anchor="middle" fill="#FFFFFF" letter-spacing="-0.02em">Social Media</text>
+
+  <!-- Gradient text "Supercharged" -->
+  <text x="720" y="380" font-family="Cal Sans, Geist, system-ui, sans-serif" font-size="80" font-weight="800" text-anchor="middle" fill="url(#textGrad)" letter-spacing="-0.02em">Supercharged</text>
+
+  <!-- Subheadline -->
+  <text x="720" y="460" font-family="Geist, Inter, system-ui, sans-serif" font-size="20" text-anchor="middle" fill="#A1A1AA">One platform. Every channel. Unlimited growth potential.</text>
+
+  <!-- CTA Button -->
+  <rect x="570" y="510" width="300" height="56" rx="12" fill="url(#btnGrad)"/>
+  <text x="720" y="546" font-family="Geist, Inter, system-ui, sans-serif" font-size="18" font-weight="600" text-anchor="middle" fill="#FFFFFF">Start for Free  →</text>
+
+  <!-- Trust section -->
+  <text x="720" y="610" font-family="Geist, Inter, system-ui, sans-serif" font-size="14" text-anchor="middle" fill="#71717A">Trusted by 10,000+ teams worldwide</text>
+
+  <!-- Logo strip -->
+  <rect x="480" y="640" width="60" height="24" rx="4" fill="rgba(255,255,255,0.1)"/>
+  <rect x="560" y="640" width="60" height="24" rx="4" fill="rgba(255,255,255,0.1)"/>
+  <rect x="640" y="640" width="60" height="24" rx="4" fill="rgba(255,255,255,0.1)"/>
+  <rect x="720" y="640" width="60" height="24" rx="4" fill="rgba(255,255,255,0.1)"/>
+  <rect x="800" y="640" width="60" height="24" rx="4" fill="rgba(255,255,255,0.1)"/>
+  <rect x="880" y="640" width="60" height="24" rx="4" fill="rgba(255,255,255,0.1)"/>
+
+  <!-- Bento Grid Preview -->
+  <rect x="120" y="720" width="400" height="280" rx="24" fill="#1A1A1A" stroke="rgba(124,58,237,0.3)" stroke-width="1"/>
+  <text x="160" y="770" font-family="Geist, Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">Smart Scheduling</text>
+  <text x="160" y="800" font-family="Geist, Inter, system-ui, sans-serif" font-size="14" fill="#71717A">AI picks the perfect time</text>
+  <!-- Calendar mockup -->
+  <rect x="160" y="830" width="320" height="140" rx="8" fill="rgba(124,58,237,0.1)"/>
+
+  <rect x="540" y="720" width="400" height="280" rx="24" fill="#1A1A1A" stroke="rgba(236,72,153,0.3)" stroke-width="1"/>
+  <text x="580" y="770" font-family="Geist, Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">Analytics</text>
+  <text x="580" y="800" font-family="Geist, Inter, system-ui, sans-serif" font-size="14" fill="#71717A">See what's working</text>
+  <!-- Chart mockup -->
+  <rect x="580" y="830" width="320" height="140" rx="8" fill="rgba(236,72,153,0.1)"/>
+
+  <rect x="960" y="720" width="360" height="130" rx="24" fill="#1A1A1A" stroke="rgba(59,130,246,0.3)" stroke-width="1"/>
+  <text x="1000" y="770" font-family="Geist, Inter, system-ui, sans-serif" font-size="16" font-weight="600" fill="#FFFFFF">Unified Inbox</text>
+  <text x="1000" y="800" font-family="Geist, Inter, system-ui, sans-serif" font-size="14" fill="#71717A">All messages, one place</text>
+
+  <rect x="960" y="870" width="175" height="130" rx="24" fill="#1A1A1A" stroke="rgba(124,58,237,0.3)" stroke-width="1"/>
+  <text x="1000" y="920" font-family="Geist, Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">Team Chat</text>
+
+  <rect x="1145" y="870" width="175" height="130" rx="24" fill="#1A1A1A" stroke="rgba(236,72,153,0.3)" stroke-width="1"/>
+  <text x="1185" y="920" font-family="Geist, Inter, system-ui, sans-serif" font-size="14" font-weight="600" fill="#FFFFFF">AI Assistant</text>
+  <text x="1270" y="950" font-size="20">✨</text>
+</svg>
