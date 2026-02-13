@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reach Design System - Crystalline Flow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Design System Page Specific Styles */
+        body {
+            background-color: var(--bg-subtle);
+        }
+
+        .ds-header {
+            padding: var(--space-16) 0;
+            background-color: var(--bg-elevated);
+            border-bottom: 1px solid var(--border-default);
+            margin-bottom: var(--space-12);
+        }
+
+        .ds-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-2);
+        }
+
+        .ds-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.125rem;
+        }
+
+        .ds-section {
+            margin-bottom: var(--space-16);
+        }
+
+        .ds-section-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: var(--space-6);
+            padding-bottom: var(--space-3);
+            border-bottom: 1px solid var(--border-default);
+        }
+
+        .ds-card {
+            background-color: var(--bg-elevated);
+            border: 1px solid var(--border-default);
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            margin-bottom: var(--space-6);
+        }
+
+        .ds-card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: var(--space-4);
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        /* Color Swatches */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: var(--space-4);
+        }
+
+        .color-swatch {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid var(--border-default);
+        }
+
+        .color-preview {
+            height: 80px;
+        }
+
+        .color-info {
+            padding: var(--space-3);
+            background-color: var(--bg-elevated);
+        }
+
+        .color-name {
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: var(--space-1);
+        }
+
+        .color-value {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+        }
+
+        /* Typography Specimens */
+        .type-specimen {
+            margin-bottom: var(--space-6);
+            padding-bottom: var(--space-6);
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .type-specimen:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .type-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-2);
+        }
+
+        .type-name {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-tertiary);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .type-specs {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* Button Examples */
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-4);
+            align-items: center;
+            margin-bottom: var(--space-6);
+        }
+
+        .button-label {
+            width: 120px;
+            font-size: 0.875rem;
+            color: var(--text-tertiary);
+        }
+
+        /* Spacing & Radius */
+        .spacing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: var(--space-4);
+        }
+
+        .spacing-item {
+            text-align: center;
+        }
+
+        .spacing-preview {
+            height: 60px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            margin-bottom: var(--space-2);
+        }
+
+        .spacing-bar {
+            background-color: var(--accent);
+            width: 100%;
+            border-radius: var(--radius-sm);
+        }
+
+        .spacing-name {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-tertiary);
+        }
+
+        .spacing-value {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        /* Radius Preview */
+        .radius-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: var(--space-4);
+        }
+
+        .radius-item {
+            text-align: center;
+        }
+
+        .radius-preview {
+            width: 80px;
+            height: 80px;
+            background-color: var(--accent-muted);
+            border: 2px solid var(--accent);
+            margin: 0 auto var(--space-2);
+        }
+
+        /* Shadow Preview */
+        .shadow-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: var(--space-6);
+        }
+
+        .shadow-item {
+            text-align: center;
+        }
+
+        .shadow-preview {
+            width: 100%;
+            height: 100px;
+            background-color: var(--bg-elevated);
+            border-radius: var(--radius-xl);
+            margin-bottom: var(--space-3);
+        }
+
+        /* Component Examples */
+        .component-example {
+            padding: var(--space-6);
+            background-color: var(--bg-subtle);
+            border-radius: var(--radius-lg);
+            margin-bottom: var(--space-4);
+        }
+
+        /* Icon Grid */
+        .icon-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: var(--space-4);
+        }
+
+        .icon-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-4);
+            background-color: var(--bg-subtle);
+            border-radius: var(--radius-lg);
+        }
+
+        .icon-item svg {
+            width: 24px;
+            height: 24px;
+            color: var(--text-primary);
+        }
+
+        .icon-name {
+            font-size: 0.75rem;
+            color: var(--text-tertiary);
+            text-align: center;
+        }
+
+        /* Form Elements */
+        .form-group {
+            margin-bottom: var(--space-4);
+        }
+
+        .form-label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: var(--space-2);
+            color: var(--text-primary);
+        }
+
+        .form-input {
+            width: 100%;
+            max-width: 400px;
+            padding: var(--space-3) var(--space-4);
+            font-family: var(--font-sans);
+            font-size: 0.9375rem;
+            border: 1px solid var(--border-default);
+            border-radius: var(--radius-md);
+            background-color: var(--bg-elevated);
+            color: var(--text-primary);
+            transition: all var(--transition-fast);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px var(--accent-muted);
+        }
+
+        .form-input::placeholder {
+            color: var(--text-muted);
+        }
+
+        .form-input-error {
+            border-color: #EF4444;
+        }
+
+        .form-input-error:focus {
+            box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.1);
+        }
+
+        .form-error {
+            font-size: 0.8125rem;
+            color: #EF4444;
+            margin-top: var(--space-1);
+        }
+
+        /* State Colors */
+        .state-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: var(--space-4);
+        }
+
+        @media (max-width: 768px) {
+            .state-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="ds-header">
+        <div class="container">
+            <h1 class="ds-title">Reach Design System</h1>
+            <p class="ds-subtitle">Crystalline Flow — Design tokens, components, and patterns</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Color Palette -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Color Palette</h2>
+
+            <div class="ds-card">
+                <h3 class="ds-card-title">Background Colors</h3>
+                <div class="color-grid">
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #FAFAFA;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Base</div>
+                            <div class="color-value">#FAFAFA</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #FFFFFF;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Elevated</div>
+                            <div class="color-value">#FFFFFF</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #F5F5F5;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Subtle</div>
+                            <div class="color-value">#F5F5F5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ds-card">
+                <h3 class="ds-card-title">Text Colors</h3>
+                <div class="color-grid">
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #0A0A0A;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Primary</div>
+                            <div class="color-value">#0A0A0A</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #525252;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Secondary</div>
+                            <div class="color-value">#525252</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #737373;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Tertiary</div>
+                            <div class="color-value">#737373</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #A3A3A3;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Muted</div>
+                            <div class="color-value">#A3A3A3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ds-card">
+                <h3 class="ds-card-title">Accent Colors</h3>
+                <div class="color-grid">
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #6366F1;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Accent (Indigo)</div>
+                            <div class="color-value">#6366F1</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #4F46E5;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Accent Hover</div>
+                            <div class="color-value">#4F46E5</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: rgba(99, 102, 241, 0.1);"></div>
+                        <div class="color-info">
+                            <div class="color-name">Accent Muted</div>
+                            <div class="color-value">rgba(99, 102, 241, 0.1)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ds-card">
+                <h3 class="ds-card-title">State Colors</h3>
+                <div class="color-grid state-grid">
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #22C55E;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Success</div>
+                            <div class="color-value">#22C55E</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #EF4444;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Error</div>
+                            <div class="color-value">#EF4444</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #F59E0B;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Warning</div>
+                            <div class="color-value">#F59E0B</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #3B82F6;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Info</div>
+                            <div class="color-value">#3B82F6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ds-card">
+                <h3 class="ds-card-title">Border Colors</h3>
+                <div class="color-grid">
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #E5E5E5;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Default</div>
+                            <div class="color-value">#E5E5E5</div>
+                        </div>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-preview" style="background-color: #F0F0F0;"></div>
+                        <div class="color-info">
+                            <div class="color-name">Subtle</div>
+                            <div class="color-value">#F0F0F0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Typography</h2>
+
+            <div class="ds-card">
+                <h3 class="ds-card-title">Type Scale</h3>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">Hero / Display 1</span>
+                        <span class="type-specs">72px / 600 / -0.03em</span>
+                    </div>
+                    <p style="font-size: 4.5rem; font-weight: 600; letter-spacing: -0.03em; line-height: 1.1;">Social media management</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">Display 2</span>
+                        <span class="type-specs">48px / 600 / -0.02em</span>
+                    </div>
+                    <p style="font-size: 3rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2;">For modern teams</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">H1 / Section Title</span>
+                        <span class="type-specs">40px / 600 / -0.02em</span>
+                    </div>
+                    <p style="font-size: 2.5rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.2;">Everything you need to grow</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">H2</span>
+                        <span class="type-specs">30px / 600 / -0.02em</span>
+                    </div>
+                    <p style="font-size: 1.875rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.3;">Simple, transparent pricing</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">H3 / Card Title</span>
+                        <span class="type-specs">20px / 600 / -0.01em</span>
+                    </div>
+                    <p style="font-size: 1.25rem; font-weight: 600; letter-spacing: -0.01em;">Smart Scheduling</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">Body Large</span>
+                        <span class="type-specs">20px / 400 / 0</span>
+                    </div>
+                    <p style="font-size: 1.25rem; color: var(--text-secondary); line-height: 1.6;">Schedule, analyze, and grow your social presence from a single dashboard.</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">Body</span>
+                        <span class="type-specs">16px / 400 / 0</span>
+                    </div>
+                    <p style="font-size: 1rem; color: var(--text-secondary); line-height: 1.6;">AI-powered timing suggestions for maximum reach. Post at the perfect moment every time.</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">Body Small</span>
+                        <span class="type-specs">15px / 400 / 0</span>
+                    </div>
+                    <p style="font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.6;">Track engagement, reach, and growth across all platforms.</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">Caption</span>
+                        <span class="type-specs">14px / 400 / 0</span>
+                    </div>
+                    <p style="font-size: 0.875rem; color: var(--text-tertiary); line-height: 1.5;">No credit card required</p>
+                </div>
+
+                <div class="type-specimen">
+                    <div class="type-label">
+                        <span class="type-name">Label / Overline</span>
+                        <span class="type-specs">14px / 600 / 0.05em / uppercase</span>
+                    </div>
+                    <p style="font-size: 0.875rem; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-tertiary);">Trusted by teams at</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Buttons</h2>
+
+            <div class="ds-card">
+                <h3 class="ds-card-title">Button Variants</h3>
+
+                <div class="button-row">
+                    <span class="button-label">Primary</span>
+                    <button class="btn btn-primary">Get Started</button>
+                    <button class="btn btn-primary btn-large">Get Started <span class="arrow">→</span></button>
+                    <button class="btn btn-primary btn-small">Get Started</button>
+                </div>
+
+                <div class="button-row">
+                    <span class="button-label">Secondary</span>
+                    <button class="btn btn-secondary">Watch Demo</button>
+                    <button class="btn btn-secondary btn-large"><span class="play-icon">▶</span> Watch Demo</button>
+                    <button class="btn btn-secondary btn-small">Learn More</button>
+                </div>
+
+                <div class="button-row">
+                    <span class="button-label">Ghost</span>
+                    <button class="btn btn-ghost">Schedule</button>
+                    <button class="btn btn-ghost">Cancel</button>
+                </div>
+
+                <div class="button-row">
+                    <span class="button-label">CTA</span>
+                    <button class="btn btn-cta btn-large">Start Your Free Trial <span class="arrow">→</span></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Form Elements -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Form Elements</h2>
+
+            <div class="ds-card">
+                <h3 class="ds-card-title">Input Fields</h3>
+
+                <div class="form-group">
+                    <label class="form-label">Email Address</label>
+                    <input type="email" class="form-input" placeholder="you@example.com">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-input" placeholder="Enter your password">
+                </div>
+
+                <div class="form-group">
+                    <label class="form-label">Error State</label>
+                    <input type="text" class="form-input form-input-error" value="invalid@">
+                    <p class="form-error">Please enter a valid email address</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cards -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Cards</h2>
+
+            <div class="ds-card">
+                <h3 class="ds-card-title">Feature Card</h3>
+                <div class="component-example">
+                    <div class="feature-card" style="max-width: 350px; background: var(--bg-elevated);">
+                        <div class="feature-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                        <h3 class="feature-title">Smart Scheduling</h3>
+                        <p class="feature-description">AI-powered timing suggestions for maximum reach. Post at the perfect moment every time.</p>
+                        <a href="#" class="feature-link">Learn more <span>→</span></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ds-card">
+                <h3 class="ds-card-title">Pricing Card</h3>
+                <div class="component-example">
+                    <div style="display: flex; gap: var(--space-6); flex-wrap: wrap;">
+                        <div class="pricing-card" style="max-width: 300px; background: var(--bg-elevated);">
+                            <div class="pricing-header">
+                                <h3 class="pricing-tier">Starter</h3>
+                                <div class="pricing-price">
+                                    <span class="price-amount">$19</span>
+                                    <span class="price-period">/month</span>
+                                </div>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><span class="check">✓</span> 5 social accounts</li>
+                                <li><span class="check">✓</span> 100 posts/month</li>
+                                <li><span class="check">✓</span> Basic analytics</li>
+                            </ul>
+                            <a href="#" class="btn btn-secondary btn-full">Get Started</a>
+                        </div>
+
+                        <div class="pricing-card pricing-featured" style="max-width: 300px; background: var(--bg-elevated);">
+                            <div class="pricing-badge">Popular</div>
+                            <div class="pricing-header">
+                                <h3 class="pricing-tier">Professional</h3>
+                                <div class="pricing-price">
+                                    <span class="price-amount">$49</span>
+                                    <span class="price-period">/month</span>
+                                </div>
+                            </div>
+                            <ul class="pricing-features">
+                                <li><span class="check">✓</span> 15 social accounts</li>
+                                <li><span class="check">✓</span> Unlimited posts</li>
+                                <li><span class="check">✓</span> Advanced AI features</li>
+                            </ul>
+                            <a href="#" class="btn btn-primary btn-full">Get Started</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spacing -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Spacing Scale</h2>
+
+            <div class="ds-card">
+                <div class="spacing-grid">
+                    <div class="spacing-item">
+                        <div class="spacing-preview">
+                            <div class="spacing-bar" style="height: 4px;"></div>
+                        </div>
+                        <div class="spacing-name">space-1</div>
+                        <div class="spacing-value">4px / 0.25rem</div>
+                    </div>
+                    <div class="spacing-item">
+                        <div class="spacing-preview">
+                            <div class="spacing-bar" style="height: 8px;"></div>
+                        </div>
+                        <div class="spacing-name">space-2</div>
+                        <div class="spacing-value">8px / 0.5rem</div>
+                    </div>
+                    <div class="spacing-item">
+                        <div class="spacing-preview">
+                            <div class="spacing-bar" style="height: 12px;"></div>
+                        </div>
+                        <div class="spacing-name">space-3</div>
+                        <div class="spacing-value">12px / 0.75rem</div>
+                    </div>
+                    <div class="spacing-item">
+                        <div class="spacing-preview">
+                            <div class="spacing-bar" style="height: 16px;"></div>
+                        </div>
+                        <div class="spacing-name">space-4</div>
+                        <div class="spacing-value">16px / 1rem</div>
+                    </div>
+                    <div class="spacing-item">
+                        <div class="spacing-preview">
+                            <div class="spacing-bar" style="height: 24px;"></div>
+                        </div>
+                        <div class="spacing-name">space-6</div>
+                        <div class="spacing-value">24px / 1.5rem</div>
+                    </div>
+                    <div class="spacing-item">
+                        <div class="spacing-preview">
+                            <div class="spacing-bar" style="height: 32px;"></div>
+                        </div>
+                        <div class="spacing-name">space-8</div>
+                        <div class="spacing-value">32px / 2rem</div>
+                    </div>
+                    <div class="spacing-item">
+                        <div class="spacing-preview">
+                            <div class="spacing-bar" style="height: 48px;"></div>
+                        </div>
+                        <div class="spacing-name">space-12</div>
+                        <div class="spacing-value">48px / 3rem</div>
+                    </div>
+                    <div class="spacing-item">
+                        <div class="spacing-preview">
+                            <div class="spacing-bar" style="height: 60px;"></div>
+                        </div>
+                        <div class="spacing-name">space-16</div>
+                        <div class="spacing-value">64px / 4rem</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Border Radius -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Border Radius</h2>
+
+            <div class="ds-card">
+                <div class="radius-grid">
+                    <div class="radius-item">
+                        <div class="radius-preview" style="border-radius: 4px;"></div>
+                        <div class="spacing-name">radius-sm</div>
+                        <div class="spacing-value">4px</div>
+                    </div>
+                    <div class="radius-item">
+                        <div class="radius-preview" style="border-radius: 6px;"></div>
+                        <div class="spacing-name">radius-md</div>
+                        <div class="spacing-value">6px</div>
+                    </div>
+                    <div class="radius-item">
+                        <div class="radius-preview" style="border-radius: 8px;"></div>
+                        <div class="spacing-name">radius-lg</div>
+                        <div class="spacing-value">8px</div>
+                    </div>
+                    <div class="radius-item">
+                        <div class="radius-preview" style="border-radius: 12px;"></div>
+                        <div class="spacing-name">radius-xl</div>
+                        <div class="spacing-value">12px</div>
+                    </div>
+                    <div class="radius-item">
+                        <div class="radius-preview" style="border-radius: 16px;"></div>
+                        <div class="spacing-name">radius-2xl</div>
+                        <div class="spacing-value">16px</div>
+                    </div>
+                    <div class="radius-item">
+                        <div class="radius-preview" style="border-radius: 24px;"></div>
+                        <div class="spacing-name">radius-3xl</div>
+                        <div class="spacing-value">24px</div>
+                    </div>
+                    <div class="radius-item">
+                        <div class="radius-preview" style="border-radius: 9999px;"></div>
+                        <div class="spacing-name">radius-full</div>
+                        <div class="spacing-value">9999px</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shadows -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Shadows</h2>
+
+            <div class="ds-card">
+                <div class="shadow-grid">
+                    <div class="shadow-item">
+                        <div class="shadow-preview" style="box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);"></div>
+                        <div class="spacing-name">shadow-sm</div>
+                        <div class="spacing-value">0 1px 2px rgba(0,0,0,0.05)</div>
+                    </div>
+                    <div class="shadow-item">
+                        <div class="shadow-preview" style="box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);"></div>
+                        <div class="spacing-name">shadow-md</div>
+                        <div class="spacing-value">0 4px 6px -1px rgba(0,0,0,0.1)</div>
+                    </div>
+                    <div class="shadow-item">
+                        <div class="shadow-preview" style="box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);"></div>
+                        <div class="spacing-name">shadow-lg</div>
+                        <div class="spacing-value">0 10px 15px -3px rgba(0,0,0,0.1)</div>
+                    </div>
+                    <div class="shadow-item">
+                        <div class="shadow-preview" style="box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);"></div>
+                        <div class="spacing-name">shadow-xl</div>
+                        <div class="spacing-value">0 20px 25px -5px rgba(0,0,0,0.1)</div>
+                    </div>
+                    <div class="shadow-item">
+                        <div class="shadow-preview" style="box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);"></div>
+                        <div class="spacing-name">shadow-2xl</div>
+                        <div class="spacing-value">0 25px 50px -12px rgba(0,0,0,0.15)</div>
+                    </div>
+                    <div class="shadow-item">
+                        <div class="shadow-preview" style="box-shadow: 0 25px 100px -20px rgba(0, 0, 0, 0.1);"></div>
+                        <div class="spacing-name">shadow-product</div>
+                        <div class="spacing-value">0 25px 100px -20px rgba(0,0,0,0.1)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Icons -->
+        <section class="ds-section">
+            <h2 class="ds-section-title">Icons</h2>
+
+            <div class="ds-card">
+                <h3 class="ds-card-title">Feature Icons (24px, stroke-width: 2)</h3>
+                <div class="icon-grid">
+                    <div class="icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                        <span class="icon-name">Calendar</span>
+                    </div>
+                    <div class="icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="20" x2="18" y2="10"/>
+                            <line x1="12" y1="20" x2="12" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="14"/>
+                        </svg>
+                        <span class="icon-name">Analytics</span>
+                    </div>
+                    <div class="icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                        <span class="icon-name">Team</span>
+                    </div>
+                    <div class="icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                        <span class="icon-name">Inbox</span>
+                    </div>
+                    <div class="icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12.01" y2="18"/>
+                        </svg>
+                        <span class="icon-name">Mobile</span>
+                    </div>
+                    <div class="icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                        </svg>
+                        <span class="icon-name">Link</span>
+                    </div>
+                    <div class="icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="7" height="7"/>
+                            <rect x="14" y="3" width="7" height="7"/>
+                            <rect x="14" y="14" width="7" height="7"/>
+                            <rect x="3" y="14" width="7" height="7"/>
+                        </svg>
+                        <span class="icon-name">Dashboard</span>
+                    </div>
+                    <div class="icon-item">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 11 12 14 22 4"/>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                        </svg>
+                        <span class="icon-name">Checkbox</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer style="padding: var(--space-12) 0; background-color: var(--bg-elevated); border-top: 1px solid var(--border-default); margin-top: var(--space-16);">
+        <div class="container" style="text-align: center;">
+            <p style="color: var(--text-tertiary); font-size: 0.875rem;">
+                Reach Design System — Crystalline Flow<br>
+                Designed by Jony | February 2026
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

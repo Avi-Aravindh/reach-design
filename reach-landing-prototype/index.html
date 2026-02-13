@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reach - Social Media Management for Modern Teams</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">Reach</a>
+            <div class="nav-links">
+                <a href="#features">Features</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#resources">Resources</a>
+                <a href="#blog">Blog</a>
+            </div>
+            <div class="nav-actions">
+                <a href="#" class="nav-signin">Sign in</a>
+                <a href="#" class="btn btn-primary btn-nav">Get Started <span class="arrow">→</span></a>
+            </div>
+            <button class="nav-mobile-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-links">
+            <a href="#features">Features</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#resources">Resources</a>
+            <a href="#blog">Blog</a>
+            <a href="#">Sign in</a>
+            <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="floating-icons">
+                <div class="floating-icon icon-twitter" style="--delay: 0s; --x: -150px; --y: -80px;">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                </div>
+                <div class="floating-icon icon-instagram" style="--delay: 0.5s; --x: 180px; --y: -60px;">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </div>
+                <div class="floating-icon icon-linkedin" style="--delay: 1s; --x: -200px; --y: 50px;">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </div>
+                <div class="floating-icon icon-tiktok" style="--delay: 1.5s; --x: 220px; --y: 80px;">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+                </div>
+                <div class="floating-icon icon-facebook" style="--delay: 2s; --x: 0px; --y: -120px;">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-content">
+            <h1 class="hero-title animate-fade-up">
+                Social media management<br>
+                <span class="hero-title-accent">for modern teams</span>
+            </h1>
+            <p class="hero-subtitle animate-fade-up" style="--delay: 0.1s">
+                Schedule, analyze, and grow your social presence from a single<br>
+                dashboard. Join 10,000+ teams reaching their audience.
+            </p>
+            <div class="hero-ctas animate-fade-up" style="--delay: 0.2s">
+                <a href="#" class="btn btn-primary btn-large">
+                    Get Started Free
+                    <span class="arrow">→</span>
+                </a>
+                <a href="#" class="btn btn-secondary btn-large">
+                    <span class="play-icon">▶</span>
+                    Watch Demo
+                </a>
+            </div>
+            <p class="hero-trust animate-fade-up" style="--delay: 0.3s">No credit card required</p>
+        </div>
+
+        <!-- Product Preview -->
+        <div class="product-preview animate-fade-up" style="--delay: 0.4s">
+            <div class="browser-chrome">
+                <div class="browser-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="browser-title">Reach Dashboard</div>
+            </div>
+            <div class="browser-content">
+                <div class="dashboard-preview">
+                    <div class="dashboard-sidebar">
+                        <div class="sidebar-item active">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                            Dashboard
+                        </div>
+                        <div class="sidebar-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                            Calendar
+                        </div>
+                        <div class="sidebar-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                            Inbox
+                        </div>
+                        <div class="sidebar-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+                            Analytics
+                        </div>
+                    </div>
+                    <div class="dashboard-main">
+                        <div class="stats-row">
+                            <div class="stat-card">
+                                <div class="stat-label">Scheduled</div>
+                                <div class="stat-value">24</div>
+                            </div>
+                            <div class="stat-card">
+                                <div class="stat-label">Drafts</div>
+                                <div class="stat-value">12</div>
+                            </div>
+                            <div class="stat-card stat-highlight">
+                                <div class="stat-label">Engagement</div>
+                                <div class="stat-value">↑ 34%</div>
+                            </div>
+                        </div>
+                        <div class="composer-card">
+                            <div class="composer-header">
+                                <div class="composer-avatar"></div>
+                                <div class="composer-input">What's on your mind?</div>
+                            </div>
+                            <div class="composer-content">
+                                <div class="composer-text">
+                                    Excited to announce our latest feature update! Check out the new analytics dashboard that gives you deeper insights into your audience engagement. 🚀
+                                </div>
+                            </div>
+                            <div class="composer-footer">
+                                <div class="composer-tools">
+                                    <button class="tool-btn">📷</button>
+                                    <button class="tool-btn">📹</button>
+                                    <button class="tool-btn">📊</button>
+                                    <button class="tool-btn">#</button>
+                                </div>
+                                <div class="composer-actions">
+                                    <button class="btn btn-ghost">Schedule</button>
+                                    <button class="btn btn-primary btn-small">Publish</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Metrics -->
+    <section class="metrics">
+        <div class="container">
+            <div class="metrics-grid">
+                <div class="metric">
+                    <div class="metric-value" data-count="10000">10,000+</div>
+                    <div class="metric-label">Teams</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value" data-count="50">50M+</div>
+                    <div class="metric-label">Posts Scheduled</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">99.9%</div>
+                    <div class="metric-label">Uptime</div>
+                </div>
+                <div class="metric">
+                    <div class="metric-value">4.9★</div>
+                    <div class="metric-label">Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Everything you need to grow</h2>
+                <p class="section-subtitle">Powerful features designed for modern social media teams</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                            <line x1="16" y1="2" x2="16" y2="6"/>
+                            <line x1="8" y1="2" x2="8" y2="6"/>
+                            <line x1="3" y1="10" x2="21" y2="10"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Smart Scheduling</h3>
+                    <p class="feature-description">AI-powered timing suggestions for maximum reach. Post at the perfect moment every time.</p>
+                    <a href="#" class="feature-link">Learn more <span>→</span></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="18" y1="20" x2="18" y2="10"/>
+                            <line x1="12" y1="20" x2="12" y2="4"/>
+                            <line x1="6" y1="20" x2="6" y2="14"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Deep Analytics</h3>
+                    <p class="feature-description">Track engagement, reach, and growth across all platforms with beautiful, actionable reports.</p>
+                    <a href="#" class="feature-link">Learn more <span>→</span></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Team Collaboration</h3>
+                    <p class="feature-description">Assign tasks, approve content, and share calendars. Work together seamlessly.</p>
+                    <a href="#" class="feature-link">Learn more <span>→</span></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Unified Inbox</h3>
+                    <p class="feature-description">All messages in one place for faster responses. Never miss a comment or DM again.</p>
+                    <a href="#" class="feature-link">Learn more <span>→</span></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"/>
+                            <line x1="12" y1="18" x2="12.01" y2="18"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Multi-Platform</h3>
+                    <p class="feature-description">Connect Twitter, Instagram, TikTok, LinkedIn, Facebook, and more from one dashboard.</p>
+                    <a href="#" class="feature-link">Learn more <span>→</span></a>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">API & Integrations</h3>
+                    <p class="feature-description">Connect with Zapier, Slack, Notion, and 50+ tools to automate your workflow.</p>
+                    <a href="#" class="feature-link">Learn more <span>→</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Logos -->
+    <section class="platforms">
+        <div class="container">
+            <p class="platforms-label">Trusted by teams at</p>
+            <div class="platforms-logos">
+                <div class="logo-item">
+                    <svg viewBox="0 0 100 32" fill="currentColor"><text x="0" y="24" font-family="Inter" font-weight="600" font-size="18">Airbnb</text></svg>
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 100 32" fill="currentColor"><text x="0" y="24" font-family="Inter" font-weight="600" font-size="18">Spotify</text></svg>
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 100 32" fill="currentColor"><text x="0" y="24" font-family="Inter" font-weight="600" font-size="18">Stripe</text></svg>
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 100 32" fill="currentColor"><text x="0" y="24" font-family="Inter" font-weight="600" font-size="18">Notion</text></svg>
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 100 32" fill="currentColor"><text x="0" y="24" font-family="Inter" font-weight="600" font-size="18">Figma</text></svg>
+                </div>
+                <div class="logo-item">
+                    <svg viewBox="0 0 100 32" fill="currentColor"><text x="0" y="24" font-family="Inter" font-weight="600" font-size="18">Linear</text></svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="testimonial">
+        <div class="container">
+            <div class="testimonial-card">
+                <blockquote class="testimonial-quote">
+                    "Reach transformed how our team manages social. We went from scattered tools to a single source of truth. Our engagement is up 47% and we're saving 15 hours per week."
+                </blockquote>
+                <div class="testimonial-author">
+                    <div class="author-avatar">
+                        <span>SC</span>
+                    </div>
+                    <div class="author-info">
+                        <div class="author-name">Sarah Chen</div>
+                        <div class="author-role">Head of Marketing</div>
+                        <div class="author-company">@Amplitude · Previously: Buffer, Hootsuite</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Simple, transparent pricing</h2>
+                <p class="section-subtitle">Start free, scale as you grow. No hidden fees.</p>
+            </div>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-tier">Starter</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$19</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> 5 social accounts</li>
+                        <li><span class="check">✓</span> 100 posts/month</li>
+                        <li><span class="check">✓</span> Basic analytics</li>
+                        <li><span class="check">✓</span> Email support</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary btn-full">Get Started</a>
+                </div>
+
+                <div class="pricing-card pricing-featured">
+                    <div class="pricing-badge">Popular</div>
+                    <div class="pricing-header">
+                        <h3 class="pricing-tier">Professional</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$49</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> 15 social accounts</li>
+                        <li><span class="check">✓</span> Unlimited posts</li>
+                        <li><span class="check">✓</span> Advanced AI features</li>
+                        <li><span class="check">✓</span> Team collaboration</li>
+                        <li><span class="check">✓</span> Priority support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary btn-full">Get Started</a>
+                </div>
+
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-tier">Agency</h3>
+                        <div class="pricing-price">
+                            <span class="price-amount">$99</span>
+                            <span class="price-period">/month</span>
+                        </div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><span class="check">✓</span> Unlimited accounts</li>
+                        <li><span class="check">✓</span> White-label reports</li>
+                        <li><span class="check">✓</span> Priority API access</li>
+                        <li><span class="check">✓</span> Dedicated CSM</li>
+                        <li><span class="check">✓</span> Custom integrations</li>
+                    </ul>
+                    <a href="#" class="btn btn-secondary btn-full">Contact Us</a>
+                </div>
+            </div>
+
+            <p class="pricing-enterprise">
+                <strong>Enterprise?</strong> <a href="#">Let's talk →</a>
+            </p>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta">
+        <div class="container">
+            <div class="cta-card">
+                <h2 class="cta-title">Ready to reach your audience?</h2>
+                <p class="cta-subtitle">Get started free today. No credit card required.</p>
+                <a href="#" class="btn btn-cta btn-large">
+                    Start Your Free Trial
+                    <span class="arrow">→</span>
+                </a>
+                <p class="cta-demo">Or <a href="#">book a demo</a> with our team to see Reach in action</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="footer-logo">Reach</a>
+                    <p class="footer-tagline">Social media management for modern teams.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        </a>
+                        <a href="#" class="social-link">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#">Features</a></li>
+                            <li><a href="#">Pricing</a></li>
+                            <li><a href="#">Integrations</a></li>
+                            <li><a href="#">API Docs</a></li>
+                            <li><a href="#">Changelog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Guides</a></li>
+                            <li><a href="#">Status</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">© 2026 Reach. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
