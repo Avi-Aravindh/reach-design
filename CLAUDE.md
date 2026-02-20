@@ -77,12 +77,13 @@ Each session, I wake up fresh. These files are my memory. Read them. Update them
 
 On startup, ALWAYS run:
 
-1. Check for orphaned subagents
-2. If any stuck subagents exist, kill them
-3. Check Discord #agent-workspace for any pending agent completions
-4. Welcome user back: "Welcome back! What do you need?"
+1. **Read all lessons** - `ls /workspace/group/lessons/*.md` and read each one
+2. Check for orphaned subagents
+3. If any stuck subagents exist, kill them
+4. Check Discord #agent-workspace for any pending agent completions
+5. Welcome user back: "Welcome back! What do you need?"
 
-This prevents the stuck-session issue you experienced.
+This prevents repeating mistakes and ensures continuity.
 
 ### Monitoring Discord
 
