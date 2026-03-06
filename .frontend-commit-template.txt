@@ -1,0 +1,28 @@
+refactor: Update frontend components for derived status
+
+**Context:**
+Backend refactoring centralizes status on campaign_platforms table only.
+Campaigns now have derivedStatus computed from platform statuses.
+
+**Frontend Changes:**
+
+Components:
+- campaign-card.tsx: Use derivedStatus, show platform breakdown for partially_active
+- campaign-details.tsx: Add platform-level pause/resume/activate controls
+- [If Post.status removed] post-card.tsx: Show contentType badge instead of status
+
+API Layer:
+- Add getCampaignWithDerivedStatus()
+- Add pauseCampaign(), resumeCampaign()
+- Add pausePlatform(), resumePlatform(), activatePlatform()
+
+Types:
+- Already updated in commit 51d31a7 (CampaignPlatformStatus, DerivedCampaignStatus)
+
+**Related:**
+- Backend PR: [link to Turing's PR]
+- GitHub issue: #24
+- Backend commit: 99dfb31 (Phase 1)
+- Migration: 019_centralize_status_on_campaign_platforms.sql
+
+Co-Authored-By: Claude Sonnet 4.5 <noreply@anthropic.com>
