@@ -4,7 +4,7 @@
   },
   "dependencies": {
     "convex": "^1.31.7",
-    "expo-dev-client": "^55.0.18",
+    "expo-dev-client": "^4.0.29",
     "imap": "^0.8.19",
     "mailparser": "^3.9.3",
     "nodemailer": "^8.0.0"
